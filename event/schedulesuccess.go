@@ -7,11 +7,7 @@ import (
 )
 
 type ScheduleSuccess struct {
-	notifies []notification.NotificationInterface
-}
-
-func (e *ScheduleSuccess) SetNotify(n notification.NotificationInterface) {
-	e.notifies = append(e.notifies, n)
+	Basic
 }
 
 func (e *ScheduleSuccess) Trigger(p person.PersonInterface) {
