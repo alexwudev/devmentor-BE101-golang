@@ -7,11 +7,7 @@ import (
 )
 
 type RegisterSuccess struct {
-	notifies []notification.NotificationInterface
-}
-
-func (e *RegisterSuccess) SetNotify(n notification.NotificationInterface) {
-	e.notifies = append(e.notifies, n)
+	Basic
 }
 
 func (e *RegisterSuccess) Trigger(p person.PersonInterface) {

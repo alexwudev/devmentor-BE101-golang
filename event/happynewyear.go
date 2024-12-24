@@ -7,11 +7,7 @@ import (
 )
 
 type HappyNewYear struct {
-	notifies []notification.NotificationInterface
-}
-
-func (e *HappyNewYear) SetNotify(n notification.NotificationInterface) {
-	e.notifies = append(e.notifies, n)
+	Basic
 }
 
 func (e *HappyNewYear) Trigger(p person.PersonInterface) {

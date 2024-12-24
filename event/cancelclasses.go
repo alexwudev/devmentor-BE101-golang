@@ -7,11 +7,7 @@ import (
 )
 
 type CancelClasses struct {
-	notifies []notification.NotificationInterface
-}
-
-func (e *CancelClasses) SetNotify(n notification.NotificationInterface) {
-	e.notifies = append(e.notifies, n)
+	Basic
 }
 
 func (e *CancelClasses) Trigger(p person.PersonInterface) {
