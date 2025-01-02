@@ -1,5 +1,5 @@
 package log
 
 type Es struct {
-	Base
+	Basic
 }
