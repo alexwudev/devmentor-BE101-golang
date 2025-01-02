@@ -17,12 +17,19 @@ func main() {
 		IdentityType: "Student",
 		Language:     language.English{},
 	}
-	event_rs := event.RegisterSuccess{}
+	event_rs := &event.RegisterSuccess{}
+	event_rs.SetEventName("RegisterSuccess")
 	event_rs.Trigger(newstudent)
-	event_hny := event.HappyNewYear{}
+
+	event_hny := &event.HappyNewYear{}
+	event_hny.SetEventName("HappyNewYear")
 	event_hny.Trigger(newuser)
-	event_cc := event.CancelClasses{}
+
+	event_cc := &event.CancelClasses{}
+	event_cc.SetEventName("CancelClasses")
 	event_cc.Trigger(newstudent)
-	event_ss := event.ScheduleSuccess{}
+
+	event_ss := &event.ScheduleSuccess{}
+	event_ss.SetEventName("ScheduleSuccess")
 	event_ss.Trigger(newuser)
 }
